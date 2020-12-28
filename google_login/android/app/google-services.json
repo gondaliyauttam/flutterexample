@@ -1,0 +1,40 @@
+{
+  "project_info": {
+    "project_number": "659239817219",
+    "firebase_url": "https://sign-11dc9.firebaseio.com",
+    "project_id": "sign-11dc9",
+    "storage_bucket": "sign-11dc9.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:659239817219:android:3081ae57b6c09937ccbe36",
+        "android_client_info": {
+          "package_name": "com.depixed.googleauth"
+        }
+      },
+      "oauth_client": [
+        {
+          "client_id": "659239817219-ijaqhvrueosuvf4pr3ut2n8jd2ojb1h9.apps.googleusercontent.com",
+          "client_type": 3
+        }
+      ],
+      "api_key": [
+        {
+          "current_key": "AIzaSyAfIIDQq3YigDK8SvFX5N7BgPXCVT5Ey38"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": [
+            {
+              "client_id": "659239817219-ijaqhvrueosuvf4pr3ut2n8jd2ojb1h9.apps.googleusercontent.com",
+              "client_type": 3
+            }
+          ]
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
