@@ -10,84 +10,84 @@ class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return MaterialApp(
-      home: Thirdpage(),
+      home: Facebook(),
     );
   }
 }
 
-class Secondpage extends StatefulWidget {
+// class Secondpage extends StatefulWidget {
+//   @override
+//   _SecondpageState createState() => _SecondpageState();
+// }
+
+// class _SecondpageState extends State<Secondpage> {
+//   GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
+//   bool isloggedin = false;
+
+//   _login() async {
+//     try {
+//       await _googleSignIn.signIn();
+//       setState(() {
+//         isloggedin = true;
+//       });
+//     } catch (error) {
+//       print(error);
+//     }
+//   }
+
+//   _logout() {
+//     _googleSignIn.signOut();
+//     setState(() {
+//       isloggedin = false;
+//     });
+//   }
+
+//   @override
+//   Widget build(BuildContext context) {
+//     return Scaffold(
+//       appBar: AppBar(
+//         title: Text('Google'),
+//         centerTitle: true,
+//       ),
+//       body: Center(
+//         child: isloggedin
+//             ? Column(
+//                 mainAxisAlignment: MainAxisAlignment.center,
+//                 children: [
+//                   Image.network(
+//                     _googleSignIn.currentUser.photoUrl,
+//                     height: 100,
+//                     width: 100,
+//                   ),
+//                   Text(_googleSignIn.currentUser.displayName),
+//                   Text(_googleSignIn.currentUser.email),
+//                   OutlineButton(
+//                     child: Text("Logout"),
+//                     onPressed: () {
+//                       _logout();
+//                     },
+//                   ),
+//                 ],
+//               )
+//             : Center(
+//                 child: OutlineButton(
+//                   child: Text("Login With Google"),
+//                   onPressed: () {
+//                     _login();
+//                   },
+//                 ),
+//               ),
+//       ),
+//     );
+//   }
+// }
+
+class Facebook extends StatefulWidget {
   @override
-  _SecondpageState createState() => _SecondpageState();
+  _FacebookState createState() => _FacebookState();
 }
 
-class _SecondpageState extends State<Secondpage> {
-  GoogleSignIn _googleSignIn = GoogleSignIn(scopes: ['email']);
-  bool isloggedin = false;
-
-  _login() async {
-    try {
-      await _googleSignIn.signIn();
-      setState(() {
-        isloggedin = true;
-      });
-    } catch (error) {
-      print(error);
-    }
-  }
-
-  _logout() {
-    _googleSignIn.signOut();
-    setState(() {
-      isloggedin = false;
-    });
-  }
-
-  @override
-  Widget build(BuildContext context) {
-    return Scaffold(
-      appBar: AppBar(
-        title: Text('Google'),
-        centerTitle: true,
-      ),
-      body: Center(
-        child: isloggedin
-            ? Column(
-                mainAxisAlignment: MainAxisAlignment.center,
-                children: [
-                  Image.network(
-                    _googleSignIn.currentUser.photoUrl,
-                    height: 100,
-                    width: 100,
-                  ),
-                  Text(_googleSignIn.currentUser.displayName),
-                  Text(_googleSignIn.currentUser.email),
-                  OutlineButton(
-                    child: Text("Logout"),
-                    onPressed: () {
-                      _logout();
-                    },
-                  ),
-                ],
-              )
-            : Center(
-                child: OutlineButton(
-                  child: Text("Login With Google"),
-                  onPressed: () {
-                    _login();
-                  },
-                ),
-              ),
-      ),
-    );
-  }
-}
-
-class Thirdpage extends StatefulWidget {
-  @override
-  _ThirdpageState createState() => _ThirdpageState();
-}
-
-class _ThirdpageState extends State<Thirdpage> {
+class _FacebookState extends State<Facebook> {
   bool isloggedin = false;
   Map userprofile;
   final facebookLogin = FacebookLogin();
@@ -141,6 +141,7 @@ class _ThirdpageState extends State<Thirdpage> {
                     width: 100.0,
                   ),
                   Text(userprofile["name"]),
+                  Text(userprofile["email"]),
                   OutlineButton(
                     child: Text("Logout"),
                     onPressed: () {
